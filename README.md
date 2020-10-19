@@ -11,10 +11,10 @@ feel free to fork and clone this repo if you'd like 🔮
 ## usage
 
 ✨ GET /compliments/random/:name  
-    &nbsp;&nbsp;&nbsp;&nbsp;a random compliment just for \<name\> 💫  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a random compliment just for \<name\> 💫  
     
 ✨ GET /compliments  
-    &nbsp;&nbsp;&nbsp;&nbsp;get all compliments 💫  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get all compliments 💫  
     
 ✨ POST /compliments/:message  
     &nbsp;&nbsp;&nbsp;&nbsp;create-a-new-compliment-for-\<name\>-using-hyphens-for-spaces! 💫  
