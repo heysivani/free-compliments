@@ -7,10 +7,43 @@ const port = 7777;
 
 app.use(express.static("./client"));
 
-const test = knex.select().table("compliments")
-.then((rows) => {
-    console.log("ROWS" + rows);
+app.get("/api/compliments", (req, res) => {
+    knex
+    .from("compliments")
+    .select("id", "message", "type", "intensity")
+    .then (data => {
+        console.log("HERE ", data);
+        res.send(data);
+    });
 });
+
+app.post("/api/compliments/:message", (req, res) => {
+    knex("compliments")
+    .insert({ message: req.params.message, type: "happy", intensity: "medium" })
+    .then (data => {
+        console.log("HERE ", data);
+        res.sendStatus(201);
+    });
+});
+
+app.delete("/api/compliments/:id", (req, res) => {
+    knex("compliments")
+    .where({ id: req.params.id })
+    .del()
+    .then (data => {
+        res.sendStatus(200);
+    })
+});
+
+app.patch("/api/compliments/:id", (req, res) => {
+    knex("compliments")
+    .where({ id: req.params.id })
+    .del()
+    .then (data => {
+        res.sendStatus(200);
+    })
+});
+
 
 //check
 // app.get("/check", (req, res) => {
