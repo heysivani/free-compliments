@@ -9,6 +9,13 @@ body {
     padding-top: 7px;
 }
 
+#link {
+    color: rgb(236, 137, 71);
+    display: flexbox;
+    text-align: center;
+    font-size: 27px;
+}
+
 #instructions {
     font-size: 37px;
     padding-top: 22px;
