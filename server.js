@@ -8,17 +8,18 @@ const port = 7777;
 app.use(express.static("./client"));
 
 // lists all compliments
-app.get("/api/compliments", (req, res) => {
+app.get("/compliments", (req, res) => {
     knex
     .from("compliments")
     .select("id", "message")
+    .orderBy("id", "asc")
     .then (data => {
         res.send(data);
     });
 });
 
 // delivers random compliment to <name>
-app.get("/api/compliments/:name", (req, res) => {
+app.get("/compliments/random/:name", (req, res) => {
     knex
     .from("compliments")
     .select("message")
@@ -30,15 +31,17 @@ app.get("/api/compliments/:name", (req, res) => {
 });
 
 // creates new compliment message
-app.post("/api/compliments/:message", (req, res) => {
+app.post("/compliments/:message", (req, res) => {
+    let compliment = req.params.message.replace(/-/g, " ");
     knex("compliments")
-    .insert({ message: req.params.message })
-    .then (data => {
+    .insert({ message: compliment })
+    .then (done => {
         res.sendStatus(201);
     });
 });
 
-app.delete("/api/compliments/:id", (req, res) => {
+// deletes a compliment
+app.delete("/compliments/:id", (req, res) => {
     knex("compliments")
     .where({ id: req.params.id })
     .del()
@@ -47,10 +50,23 @@ app.delete("/api/compliments/:id", (req, res) => {
     })
 });
 
-app.patch("/api/compliments/:id", (req, res) => {
+// edits a compliment
+app.patch("/compliments/:id/:message", (req, res) => {
+    let compliment = req.params.message.replace(/-/g, " ");
     knex("compliments")
     .where({ id: req.params.id })
-    .del()
+    .update({ message: compliment })
+    .then (data => {
+        res.sendStatus(200);
+    })
+});
+
+// replaces a compliment (this basically does the same as above, but with put)
+app.put("/compliments/:id/:message", (req, res) => {
+    let compliment = req.params.message.replace(/-/g, " ");
+    knex("compliments")
+    .where({ id: req.params.id })
+    .update({ message: compliment })
     .then (data => {
         res.sendStatus(200);
     })

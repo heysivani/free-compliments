@@ -1,3 +1,26 @@
 body {
-    background-color: brown;
+    background-color: rgb(207, 56, 10);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 77px;
+    color: rgb(247, 195, 117);
+    font-weight: bolder;
+    display: flexbox;
+    text-align: center;
+    padding-top: 7px;
+}
+
+#instructions {
+    font-size: 37px;
+    padding-top: 22px;
+    padding-left: 27px;
+    color: rgb(247, 195, 117);
+    text-align: left;
+}
+
+#explanation {
+    font-size: 24px;
+    padding-top: 7px;
+    padding-left: 81px;
+    color: rgb(243, 158, 89);
+    text-align: left;
 }
