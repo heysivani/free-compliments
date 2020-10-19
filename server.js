@@ -7,10 +7,10 @@ const port = 7777;
 
 app.use(express.static("./client"));
 
-// const test = knex.select().table("newTest")
-// .then((rows) => {
-//     console.log(rows);
-// });
+const test = knex.select().table("compliments")
+.then((rows) => {
+    console.log("ROWS" + rows);
+});
 
 //check
 // app.get("/check", (req, res) => {
