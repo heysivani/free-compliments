@@ -17,16 +17,16 @@ feel free to fork and clone this repo if you'd like 🔮
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get all compliments 💫  
     
 ✨ POST /compliments/:message  
-    &nbsp;&nbsp;&nbsp;&nbsp;create-a-new-compliment-for-\<name\>-using-hyphens-for-spaces! 💫  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;create-a-new-compliment-for-\<name\>-using-hyphens-for-spaces! 💫  
     
 ✨ DELETE /compliments/:id  
-    &nbsp;&nbsp;&nbsp;&nbsp;delete a compliment by \<id\> 💫  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete a compliment by \<id\> 💫  
     
 ✨ PATCH /compliments/:id/:message  
-    &nbsp;&nbsp;&nbsp;&nbsp;edit a compliment at \<id\> with \<a-message\> 💫  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;edit a compliment at \<id\> with \<a-message\> 💫  
     
 ✨ PUT /compliments/:id/:message  
-    &nbsp;&nbsp;&nbsp;&nbsp;replace a compliment at \<id\> with \<a-message\> 💫  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;replace a compliment at \<id\> with \<a-message\> 💫  
 
 ## contributing
 
