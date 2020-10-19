@@ -5,8 +5,9 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex("compliments").insert([
-        {message: "it worked!!"},
-        {message: "yay!!"},
+        {message: "<name>'s outfit is on point."},
+        {message: "The world is a better place because <name>'s in it :)"},
+        {message: "<name> is so smart!"}
       ]);
     });
 };
