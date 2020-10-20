@@ -1,23 +1,14 @@
 window.onload = function () {
 
+    // WIP: implementing forms with buttons to make queries
 
-    let links = document.getElementsByTagName("link");
-    for (let cl in links)
-    {
-        let link = links[cl];
-        if (link.rel === "stylesheet")
-            link.href += "";
-    }
+    // const postButton = document.getElementById("postButton");
 
-
-    const body = document.body;
-    console.log("APP");
-
-    
-}
-
-
-
-// const test = document.createElement("div");
-// test.innerText = "I'M ALIVE";
-// body.append(test);
+    // postButton.addEventListener("click", async () => {
+    //     console.log("Post clicked");
+    //     const response = await fetch("/compliments/:message", {
+    //         method: "post",
+    //     })
+        
+    // });
+};
