@@ -8,7 +8,7 @@ const port = 7777;
 app.use(express.static("./client"));
 
 // lists all compliments
-app.get("https://heysivani.github.io/free-compliments/compliments", (req, res) => {
+app.get("heysivani.github.io/free-compliments/compliments", (req, res) => {
     knex
     .from("compliments")
     .select("id", "message")
